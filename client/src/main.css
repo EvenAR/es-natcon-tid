@@ -1,0 +1,75 @@
+body {
+  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  text-align: center;
+  background: black;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+.button {
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+  border: 0.8vw solid;
+  border-bottom-color: rgba(0,0,0, 0.5);
+  border-right-color: rgba(0,0,0, 0.5);
+  border-left-color: rgba(0,0,0, 0.1);
+  border-top-color: rgba(0,0,0, 0.1);
+  font-size: 2vw;
+  background: gray;
+  user-select: none;
+}
+
+.button::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.button.pink {
+  background: #B1A5B1;
+}
+
+.button.beige {
+  background: #C2C3B6;
+}
+
+.button.purple {
+  background: #7D69FC;
+}
+
+.button.green {
+  background: #8ABEC1;
+}
+
+.button.darkGreen {
+  background: #59A4A4;
+}
+
+.button.disabled {
+  color: gray;
+  pointer-events: none;
+}
+
+.pressed {
+  border-bottom-color: rgba(0,0,0, 0.1);
+  border-right-color: rgba(0,0,0, 0.1);
+  border-left-color: rgba(0,0,0, 0.5);
+  border-top-color: rgba(0,0,0, 0.5);
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(10, 1fr);
+}
